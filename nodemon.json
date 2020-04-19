@@ -1,0 +1,7 @@
+{
+	"delay": "100",
+	"verbose": true,
+	"watch": [
+		"build/"
+	]
+}

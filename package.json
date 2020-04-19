@@ -1,0 +1,29 @@
+{
+	"author": "webstrand",
+	"description": "",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^2.28.0",
+		"@typescript-eslint/parser": "^2.28.0",
+		"concurrently": "^5.1.0",
+		"eslint": "^6.8.0",
+		"nodemon": "^2.0.3",
+		"typescript": "^3.8.3"
+	},
+	"engines": {
+		"node": ">=13.11.0"
+	},
+	"license": "(MIT OR 0BSD OR CC0)",
+	"main": "build/index.js",
+	"name": "modular-typescript-starter",
+	"private": true,
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc && concurrently --kill-others npm:watch-build npm:watch-start",
+		"lint": "eslint . --ext .ts,.tsx,.json",
+		"start": "node --experimental-specifier-resolution=node build/index.js",
+		"watch-build": "tsc --watch --preserveWatchOutput",
+		"watch-start": "nodemon --experimental-specifier-resolution=node build/index.js"
+	},
+	"type": "module",
+	"version": "0.0.0"
+}

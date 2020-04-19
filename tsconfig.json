@@ -1,0 +1,15 @@
+
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"incremental": true,
+		"module": "ES2015",
+		"outDir": "build",
+		"sourceMap": true,
+		"strict": true,
+		"target": "ES2019"
+	},
+	"include": [
+		"src/**/*"
+	]
+}
