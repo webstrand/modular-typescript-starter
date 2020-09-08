@@ -1,14 +1,12 @@
-import chai from "chai";
 import "mocha";
-
-chai.should();
+import chai from "chai";
 const { expect } = chai;
 
 import { message } from "./index";
 
 describe("message", function () {
 	it("should be named message", function () {
-		message.name.should.equal("message");
+		expect(message.name).to.equal("message");
 	});
 
 	it("should return the example message", function () {
