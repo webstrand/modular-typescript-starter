@@ -12,6 +12,8 @@
 		"eslint": "^6.8.0",
 		"mocha": "^7.1.1",
 		"nodemon": "^2.0.3",
+		"source-map-support": "^0.5.19",
+		"ts-node": "^9.0.0",
 		"typescript": "^3.8.3"
 	},
 	"engines": {
@@ -25,10 +27,10 @@
 		"build": "tsc",
 		"dev": "tsc && concurrently --kill-others npm:watch-build npm:watch-start",
 		"lint": "eslint . --ext .ts,.tsx,.json",
-		"start": "node --experimental-specifier-resolution=node build/index.js",
-		"test": "tsc && mocha --experimental-specifier-resolution=node 'build/**/*.spec.js'",
+		"start": "node -r source-map-support/register --experimental-specifier-resolution=node build/index.js",
+		"test": "tsc && mocha -r source-map-support/register --experimental-specifier-resolution=node 'build/**/*.spec.js'",
 		"watch-build": "tsc --watch --preserveWatchOutput",
-		"watch-start": "nodemon --experimental-specifier-resolution=node build/index.js"
+		"watch-start": "nodemon -r source-map-support/register --experimental-specifier-resolution=node build/index.js"
 	},
 	"type": "module",
 	"version": "0.0.0"

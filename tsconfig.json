@@ -9,6 +9,9 @@
 		"strict": true,
 		"target": "ES2019"
 	},
+	"exclude": [
+		"**/*.script.ts"
+	],
 	"include": [
 		"src/**/*"
 	]
