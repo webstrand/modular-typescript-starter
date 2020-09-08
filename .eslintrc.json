@@ -19,17 +19,42 @@
 			],
 			"files": [ "**/*.ts", "**/*.tsx" ],
 			"rules": {
+				"@typescript-eslint/ban-ts-ignore": [
+					"off"
+				],
+				"@typescript-eslint/camelcase": [
+					"off"
+				],
 				"@typescript-eslint/explicit-function-return-type": [
 					"warn",
 					{
 
 					}
 				],
+				"@typescript-eslint/no-empty-function": [
+					"off"
+				],
 				"@typescript-eslint/no-explicit-any": [
 					"error",
 					{
 						"ignoreRestArgs": true
 					}
+				],
+				"@typescript-eslint/no-inferrable-types": [
+					"warn",
+					{
+						"ignoreParameters": true,
+						"ignoreProperties": true
+					}
+				],
+				"@typescript-eslint/no-namespace": [
+					"off"
+				],
+				"@typescript-eslint/no-non-null-assertion": [
+					"off"
+				],
+				"@typescript-eslint/no-this-alias": [
+					"off"
 				],
 				"@typescript-eslint/no-use-before-define": [
 					"error",
@@ -153,7 +178,10 @@
 		],
 		"semi": [
 			"error",
-			"always"
+			"always",
+			{
+				"omitLastInOneLineBlock": true
+			}
 		],
 		"semi-spacing": [
 			"warn"
